@@ -15,13 +15,14 @@ function RGB() {
   const { color_G } = useParams()
   const { color_B } = useParams()
   // 🚨 Uncomment next lines after importing
+  console.log('hey i am hit');
   return (
   <div
     className={styles.fill}
     // style={{ background: `rgb(${r}, ${g}, ${b})` }}
-    style={{ background: `rgb(${color_G}, ${color_G}, ${color_B})` }}
+    style={{ background: `rgb(${color_R}, ${color_G}, ${color_B})` }}
   >
-    <p>{`rgb(${r},${g},${b})`}</p>
+    <p>{`rgb(${color_R},${color_G},${color_B})`}</p>
   </div>
   );
 }
@@ -31,12 +32,12 @@ function ScreenColor() {
     <div>
       {/* Create Route Inside Switch */}
       {/* <h1>lol</h1> */}
-      {/* <Switch>
-      <Route>
-
+      <Switch>
+      <Route path="/rgb/:color_R/:color_G/:color_B">
+      <RGB />
       </Route>
 
-      </Switch> */}
+      </Switch>
     </div>
   );
 }
