@@ -1,3 +1,5 @@
+import { Switch } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {
   Link,
   Redirect,
@@ -9,19 +11,39 @@ import styles from './App.css';
 
 function RGB() {
   // 🚨 Get values for r, g, and b from params
+  const { color_R } = useParams()
+  // console.log("🚀 ~ file: App.jsx ~ line 15 ~ RGB ~ color_R", color_R)
+  const { color_G } = useParams()
+  // console.log("🚀 ~ file: App.jsx ~ line 17 ~ RGB ~ color_G", color_G)
+  const { color_B } = useParams()
+  // console.log("🚀 ~ file: App.jsx ~ line 19 ~ RGB ~ color_B", color_B)
   // 🚨 Uncomment next lines after importing
-  // return (
-  // <div
-  //   className={styles.fill}
-  //   style={{ background: `rgb(${r}, ${g}, ${b})` }}
-  // >
-  //   <p>{`rgb(${r},${g},${b})`}</p>
-  // </div>
-  // );
+  // console.log('hey i am hit');
+  
+  return (
+  <div
+    className={styles.fill}
+    // style={{ background: `rgb(${r}, ${g}, ${b})` }}
+    style={{ background: `rgb(${color_R}, ${color_G}, ${color_B})` }}
+  >
+    <p>{`rgb(${color_R},${color_G},${color_B})`}</p>
+  </div>
+  );
 }
 
 function ScreenColor() {
-  return <div>{/* Create Route Inside Switch */}</div>;
+  return (
+    <div>
+      {/* Create Route Inside Switch */}
+      {/* <h1>lol</h1> */}
+      <Switch>
+      <Route path="/rgb/:color_R/:color_G/:color_B">
+      <RGB />
+      </Route>
+
+      </Switch>
+    </div>
+  );
 }
 
 export default function App() {
