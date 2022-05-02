@@ -12,13 +12,13 @@ import styles from './App.css';
 function RGB() {
   // 🚨 Get values for r, g, and b from params
   const { color_R } = useParams()
-  console.log("🚀 ~ file: App.jsx ~ line 15 ~ RGB ~ color_R", color_R)
+  // console.log("🚀 ~ file: App.jsx ~ line 15 ~ RGB ~ color_R", color_R)
   const { color_G } = useParams()
-  console.log("🚀 ~ file: App.jsx ~ line 17 ~ RGB ~ color_G", color_G)
+  // console.log("🚀 ~ file: App.jsx ~ line 17 ~ RGB ~ color_G", color_G)
   const { color_B } = useParams()
-  console.log("🚀 ~ file: App.jsx ~ line 19 ~ RGB ~ color_B", color_B)
+  // console.log("🚀 ~ file: App.jsx ~ line 19 ~ RGB ~ color_B", color_B)
   // 🚨 Uncomment next lines after importing
-  console.log('hey i am hit');
+  // console.log('hey i am hit');
   
   return (
   <div
